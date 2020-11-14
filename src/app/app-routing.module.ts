@@ -10,7 +10,8 @@ const routes: Routes = [
   ,pathMatch: "full" },
   {path: 'characterpage/:number', component: HomeComponent},
   {path: 'character/:Id', component: PersonajeSeleccionadoComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'character/:filtername', component: HomeComponent}
 
   ,
 ];
