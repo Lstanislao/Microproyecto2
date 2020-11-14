@@ -9,10 +9,18 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './pages/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ListaPersonajesComponent } from './components/lista-personajes/lista-personajes.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    ListaPersonajesComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
