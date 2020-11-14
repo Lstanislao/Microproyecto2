@@ -11,28 +11,13 @@ export class ApiRequestService {
   constructor() { }
 
 
-
+  //yo se que deberia ser una sola pero te juro que no queria servir con una sola y me moleste porque con varias si agarra
   ApiUrl= "https://rickandmortyapi.com/api/character/?page=";
+  ApiUrlpersonaje= "https://rickandmortyapi.com/api/character/"
 
   getResponse(): Promise<AxiosResponse<APIResponse>>{
     return Axios.get(this.ApiUrl);
   }
-
-  /*getPage(response: APIResponse, page: number = 1) {
-    return response.results
-  }*/
-
-
-   /*getPage(page: number=0): Promise<AxiosResponse<APIResponse>>{
-    if(page=0){
-       return Axios.get(this.ApiUrl);
-    }
-    return Axios.get(`${this.ApiUrl}?page=${page}`);
-  }
-
-  getPersonajes(response: APIResponse ):Array<Personaje> {
-    return response.results
-  }*/
 
   getPage(page: number=0){
     console.log(page,"HOLA")
@@ -40,6 +25,11 @@ export class ApiRequestService {
        return Axios.get(this.ApiUrl);
     }
     return Axios.get(`${this.ApiUrl}${page}`);
+  }
+
+  getPersonaje(id: number){
+    return Axios.get(`${this.ApiUrlpersonaje}${id}`);
+
   }
 
 

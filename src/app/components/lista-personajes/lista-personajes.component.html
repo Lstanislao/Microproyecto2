@@ -8,7 +8,8 @@
             <h5 class="card-title">{{personaje.name}}</h5>
             <p class="card-text">hola
             </p>
-            <a class="btn btn-primary">Go
+            <a [routerLink]="['/character', personaje.id]" routerLinkActive="router-link-active"
+              class="btn btn-primary">Go
               somewhere</a>
           </div>
         </div>

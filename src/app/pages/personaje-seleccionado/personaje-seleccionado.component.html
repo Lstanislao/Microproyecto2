@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+
+<div class="container "></div>
+<div class="container-fluid ">
+  <div class="container bg-dark shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="row">
+      <div class="col   col-lg-6 col-md-6 col-sm-12">
+        <img class="img-fluid rounded mx-auto d-block" src="{{personaje.image}}" alt="">
+      </div>
+      <div class="col col-sm-12 col-md-6">
+        <div class="col-12">
+          <div clas="row">
+            <h1>
+              {{personaje.name}}
+            </h1>
+          </div>
+          <div clas="row">
+            <h4>
+              Status en la serie: {{personaje.status}}
+            </h4>
+          </div>
+          <div clas="row">
+            <h4>
+              Especie: {{personaje.species}}
+            </h4>
+          </div>
+          <div clas="row">
+            <h4>
+              Genero: {{personaje.gender}}
+            </h4>
+          </div>
+          <div clas="row">
+            <h4>
+              Origen: {{personaje.origin.name}}
+            </h4>
+          </div>
+          <div clas="row">
+            <h4>
+              Locacion: {{personaje.location.name}}
+            </h4>
+          </div>
+          <div clas="row">
+            <h4>
+              Fecha de creacion: {{personaje.created}}
+            </h4>
+          </div>
+          <div clas="row">
+            <button class="btn btn-primary"> Agregar a favoritos</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
