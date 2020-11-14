@@ -14,6 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ListaPersonajesComponent } from './components/lista-personajes/lista-personajes.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { PersonajeSeleccionadoComponent } from './pages/personaje-seleccionado/personaje-seleccionado.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PersonajeSeleccionadoComponent } from './pages/personaje-seleccionado/p
     NavbarComponent,
     ListaPersonajesComponent,
     HeroComponent,
-    PersonajeSeleccionadoComponent
+    PersonajeSeleccionadoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
