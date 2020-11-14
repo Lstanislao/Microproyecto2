@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiRequestService } from 'src/app/Services/api-request.service';
 
 @Component({
   selector: 'app-home',
@@ -11,5 +13,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+
+
 
 }
