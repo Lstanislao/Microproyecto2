@@ -19,11 +19,10 @@
 
 <div class="container-fluid bg-light p-5">
   <div class="row justify-content-center">
-    <button [routerLink]="['characterpage/',pagenumber]" routerLinkActive="active"
-      class="btn btn-outline-warning mr-5">Anterior</button>
+    <button (click)="getPrevPage()" class="btn btn-outline-warning mr-5">Anterior</button>
 
 
-    <button class="btn btn-success ">Siguiente</button>
+    <button (click)="getNextPage()" class="btn btn-success ">Siguiente</button>
 
   </div>
 </div>
