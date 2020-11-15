@@ -1,51 +1,53 @@
-<div class="container-fluid bg-light">
+<section id="inicio">
+  <div class="container-fluid bg-light">
 
 
-  <div class="container-fluid bg-light pt-5 pb-5">
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="" placeholder="Tipo">Buscador</span>
-      </div>
-      <select class="custom-select" id="inputTipo" [(ngModel)]="selection">
+    <div class="container-fluid bg-light pt-5 pb-5">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="" placeholder="Tipo">Buscador</span>
+        </div>
+        <select class="custom-select" id="inputTipo" [(ngModel)]="selection">
 
-        <option value="name">Nombre</option>
-        <option value="status">Estatus</option>
-        <option value="specie">Especie</option>
-        <option value="type">Tipo</option>
-        <option value="gender">Genero</option>
-      </select>
-      <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nombre">
-      <div class="input-group-prepend">
-        <button (click)="Busqueda()" class="btn btn-outline-secondary" type="button">Buscar</button>
+          <option value="name">Nombre</option>
+          <option value="status">Estatus</option>
+          <option value="specie">Especie</option>
+          <option value="type">Tipo</option>
+          <option value="gender">Genero</option>
+        </select>
+        <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nombre">
+        <div class="input-group-prepend">
+          <button (click)="Busqueda()" class="btn btn-outline-secondary" type="button">Buscar</button>
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="row ">
-    <div *ngFor="let personaje of personajes" class="col col-lg-4 col-md-6 col-sm-12  ">
-      <div class="row justify-content-center p-4">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src={{personaje.image}} alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{personaje.name}}</h5>
-            <p class="card-text">hola
-            </p>
-            <a [routerLink]="['/character', personaje.id]" routerLinkActive="router-link-active"
-              class="btn btn-primary">Detalles del personaje</a>
+    <div class="row ">
+      <div *ngFor="let personaje of personajes" class="col col-lg-4 col-md-6 col-sm-12  ">
+        <div class="row justify-content-center ">
+          <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem;">
+            <img class="card-img-top" src={{personaje.image}} alt="Card image cap">
+            <div class="card-body">
+              <center>
+                <h5 class="card-title">{{personaje.name}}</h5>
+              </center>
+              <center><a [routerLink]="['/character', personaje.id]" routerLinkActive="router-link-active"
+                  class="btn btn-primary">Detalles
+                  del personaje</a></center>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container-fluid bg-light p-5">
-  <div class="row justify-content-center">
-    <button (click)="getPrevPage()" class="btn btn-outline-warning mr-5">Anterior</button>
+  <div class="container-fluid bg-light p-5">
+    <div class="row justify-content-center">
+      <button (click)="getPrevPage()" class="btn btn-outline-warning mr-5">Anterior</button>
+      <button (click)="getNextPage()" class="btn btn-success  ml-5">Siguiente</button>
 
-
-    <button (click)="getNextPage()" class="btn btn-success ">Siguiente</button>
-
+    </div>
   </div>
-</div>
+</section>

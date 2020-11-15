@@ -21,6 +21,7 @@ export class ListaPersonajesComponent implements OnInit {
   nombre: string;
   selection: string;
 
+
   constructor(private ApiRequest : ApiRequestService,
     private route: ActivatedRoute,
     private router: Router,
@@ -48,7 +49,7 @@ export class ListaPersonajesComponent implements OnInit {
 
 
   ngOnInit(): void {
-    
+
   }
 
   getPersonajes(page: number ){
@@ -92,10 +93,6 @@ export class ListaPersonajesComponent implements OnInit {
       window.alert('No se encontraron resultados')  
       console.log('error')
       })
-
-
-
-
   }
 
   

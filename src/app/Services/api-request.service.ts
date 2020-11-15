@@ -33,10 +33,9 @@ export class ApiRequestService {
   }
 
   getFilter(tipo: string, nombre: string){
-    return Axios.get(`${this.ApiUrlpersonaje}/?${tipo}=${nombre}`)
+    return Axios.get(`${this.ApiUrlpersonaje}?${tipo}=${nombre}`)
   }
 
-  //?name=rick
 
 
 
